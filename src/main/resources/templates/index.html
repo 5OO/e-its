@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>E-ITS kataloogi põhi-, standard- ja kõrgmeetmed.</title>
+</head>
+<body>
+<h2>3.2 põhimeetmed, 3.3 standardmeetmed ja 3.4 kõrgmeetmed: </h2>
+<table>
+    <thead>
+    <tr>
+        <th>tüüp</th>
+        <th>tunnus</th>
+        <th>kirjeldus</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="row : ${data}">
+        <td th:text="${row[0]}"></td>
+        <td th:text="${row[1]}"></td>
+        <td th:utext="${row[2]}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
