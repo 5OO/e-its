@@ -46,7 +46,7 @@ public class ArticleService {
             if (article.getChildObjects() != null) {
                 for (Article child : article.getChildObjects()) {
                     List<String> row = new ArrayList<>();
-                    row.add(article.getTitle());
+                    row.add(article.getTitle().substring(article.getTitle().indexOf(' ') + 1));
                     row.add(child.getTitle());
                     row.add(child.getContent());
                     data.add(row);
