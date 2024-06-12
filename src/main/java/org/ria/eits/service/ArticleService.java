@@ -23,7 +23,7 @@ public class ArticleService {
             log.debug(Arrays.toString(articles));
             extractTitles(articles, data, List.of("3.2 Põhimeetmed", "3.3 Standardmeetmed", "3.4 Kõrgmeetmed"));
         } else {
-            log.warn("No articles retrieced from the API.");
+            log.warn("No articles retrieved from the API.");
         }
 
         return data;
