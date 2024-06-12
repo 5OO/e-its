@@ -42,17 +42,16 @@ public class ArticleService {
     }
 
     private void extractDataFromArticle(Article article, List<List<String>> data) {
-        if (article.getTitle().matches("3\\.2.*") || article.getTitle().matches("3\\.3.*") || article.getTitle().matches("3\\.4.*")) {
-            if (article.getChildObjects() != null) {
+        if ((article.getTitle().matches("3\\.2.*") || article.getTitle().matches("3\\.3.*") || article.getTitle().matches("3\\.4.*")) && article.getChildObjects() != null) {
                 for (Article child : article.getChildObjects()) {
                     List<String> row = new ArrayList<>();
                     row.add(article.getTitle().substring(article.getTitle().indexOf(' ') + 1));
-                    row.add(child.getTitle());
+                    row.add(child.getTitle().split(" ", 2)[0]);
                     row.add(child.getContent());
                     data.add(row);
                 }
             }
-        }
+
 
         if (article.getChildObjects() != null) {
             for (Article child : article.getChildObjects()) {
