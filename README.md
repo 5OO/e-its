@@ -25,8 +25,8 @@ This Spring Boot application fetches data from the E-ITS catalog version 2024 an
 1. **Clone the repository**
 
    ```sh
-   git clone https://github.com/yourusername/yourrepository.git
-   cd yourrepository
+   git clone https://github.com/5OO/e-its.git
+   cd e-its
 2. **Build the project**
 
     ```sh
